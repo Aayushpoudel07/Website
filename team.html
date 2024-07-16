@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css");
+  /* CSS styles for cards, modals, and other elements */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+    transform: translateY(-5px); /* Move the card slightly upwards on hover */
+}
+
+.card img {
+    width: 94%;
+    height: 45%;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 10; /* Position image at the top of the card */
+    left: 50%; /* Align image to the center horizontally */
+    transform: translateX(-50%); /* Move image back by half its width */
+}
+
+
+.card img:hover {
+    width: 100%;
+    height: 47%;
+    
+}
+p {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+/* CSS styles for the horizontal line */
+.line {
+    border-color: #007bff; /* Change color as desired */
+  }
+h3 {
+    text-align: center;
+}
+
+.card-text {
+    margin-top: 92%; /* Adjust margin-top to make space for image */
+}
+
+/* Define colors for each social media platform */
+.facebook-link {
+    color: #3b5998; /* Facebook color */
+}
+
+.instagram-link {
+    color: #e4405f; /* Instagram color */
+}
+
+.twitter-link {
+    color: #1da1f2; /* Twitter color */
+}
+
+.whatsapp-link {
+    color: #25d366; /* WhatsApp color */
+}
+
+/* Styles for all social links */
+.social-links {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    margin: 2px;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover effect for all social links */
+.social-links a:hover {
+    color: #FF5733; /* Color on hover */
+}
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+  }
+  .modal-btn {
+    margin-top: 10px; /* Adjust the margin to bring the button down */
+    margin-bottom: 10px;
+    background-color: #007bff; /* Example background color */
+    color: #fff; /* Example text color */
+    padding: 10px 20px; /* Example padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.modal-btn:hover {
+    background-color: #0056b3; /* Example hover background color */
+}
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+    <h2>About Us</h2>
+    <hr class="line"> <!-- Horizontal line with custom class -->
+
+<p>Get to know the amazing team at Phenoix who are committed to making your online shopping experience exceptional. 
+    From our talented developers and creative designers to our detail-oriented product specialists and customer support heroes, each team member brings their expertise and passion to the table.
+     Together, we're driven by a shared dedication to innovation and ensuring your satisfaction.
+     Our developers are constantly crafting intuitive features, while our designers infuse creativity into every design. 
+     Continuously improving our platform, we strive to provide you with the best experience possible, whether it's by expanding our product range, boosting site performance, or delivering outstanding support. 
+     Join us as we transform the world of online shopping, one click at a time!</p>
+
+<h3 style="color: #007bff;">Our Team Overview</h3>
+
+<div class="card-container">
+  <div class="card">
+    <img src="/Images/Aayush poudel.jpg" alt="Aayush Poudel - Web Developer">
+    <div class="card-text">
+      <h3>Aayush poudel</h3>
+      <h4>Web developer</h4>
+      <p>As a web developer, My journey likely began with a spark of curiosity and a passion for creating in the digital realm.</p>
+      <div class="social-links">
+        <a href="#" class="facebook-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+      <button class="modal-btn" onclick="openModal('Aayush')">Readmore</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="/Images/raman nath.jpg" alt="Raman Nath - Frontend Developer">
+
+    <div class="card-text">
+      <h3>Raman Nath</h3>
+      <h4>Frontend developer</h4>
+      <p>My friend, as a front-end developer, is responsible for crafting the user-facing aspects of websites and web applications. </p>
+      <div class="social-links">
+        <a href="#" class="facebook-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+      <button class="modal-btn" onclick="openModal('raman')">Readmore</button>
+    </div>
+  </div>
+
+  <!-- Add more cards for other team members -->
+  <div class="card">
+    <img src="/Images/samy budhathoki.jpg" alt="Samy Budhathoki - Backend Developer">
+
+    <div class="card-text">
+      <h3>Samy budhathoki</h3>
+      <h4>Backend developer</h4>
+      <p>My friend, as a back-end developer, plays a crucial role in building the foundation and functionality of websites and web applications.</p>
+      <div class="social-links">
+        <a href="#" class="facebook-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+      <button class="modal-btn" onclick="openModal('samy')">Readmore</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="/Images/Tika.jpg" alt="Tika Thamsuhang - Data Analyst">
+    <div class="card-text">
+      <h3>Tika Thamsuhang</h3>
+      <h4>Data analysis</h4>
+      <p>My friend, as a data analyst, is adept at deciphering the insights hidden within vast troves of data. Their work involves collecting, organizing, and analyzing data to extract valuable insights and inform strategic decision-making.</p>
+      <div class="social-links">
+        <a href="#" class="facebook-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+      <button class="modal-btn" onclick="openModal('Tika')">Readmore</button>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- Example updated modal content -->
+<div id="Aayush-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('Aayush')">&times;</span>
+      <h2>Aayush Poudel</h2>
+      <p>Web Developer</p>
+      <p>As a web developer, Aayush's journey likely began with a spark of curiosity and a passion for creating in the digital realm. He is dedicated to crafting intuitive features and enhancing user experiences.</p>
+    </div>
+  </div>
+
+  <div id="raman-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('raman')">&times;</span>
+      <h2>Raman nath</h2>
+      <p>Frontend Developer</p>
+      <p>Raman is a skilled frontend developer with a passion for creating engaging and user-friendly interfaces. With a keen eye for design and a strong understanding of HTML, CSS, and JavaScript, she strives to build beautiful and intuitive web experiences.</p>
+    </div>
+  </div>
+  <div id="samy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('samy')">&times;</span>
+      <h2>Samy Budhathoki</h2>
+      <p>Backend Developer</p>
+      <p>Samy is a backend developer with a knack for building robust and scalable web applications. With expertise in server-side programming languages like Python and Node.js, he is committed to optimizing performance and ensuring data integrity.</p>
+    </div>
+  </div>
+  <div id="Tika-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('Tika')">&times;</span>
+      <h2>Tika Thamsuhang</h2>
+      <p>Data Analyst</p>
+      <p>Tika is a skilled data analyst with expertise in collecting, organizing, and analyzing data to extract valuable insights. With a strong background in statistics and data visualization, she is dedicated to informing strategic decision-making and driving business growth through data-driven insights.</p>
+    </div>
+  </div>
+  
+  
+
+<script>
+  function openModal(id) {
+    document.getElementById(id + "-modal").style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id + "-modal").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

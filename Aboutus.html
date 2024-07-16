@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>About us Page</title>
+    <style>
+
+
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.aboutus-section {
+    padding: 40px 0;
+    text-align: center; /* Align the text to the center */
+    background-color: #f8f9fa; /* Add a background color */
+    color: #333; /* Set the text color */
+    border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
+    border-top: 2px solid #ccc; /* Add a top border for separation */
+}
+
+.aboutus-section h1 {
+    font-size: 36px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.aboutus-section p {
+    font-size: 18px; /* Set font size for paragraphs */
+    line-height: 1.6; /* Set line height for better readability */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.column {
+    margin: 0 15px;
+    width: calc(50% - 30px); /* Ensure each column takes up half of the row */
+}
+
+.aboutus-card {
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+        /* CSS for modal */
+ .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto; /* Adjust the margin to center vertically */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Adjust the width of the modal */
+            max-width: 600px; /* Set a maximum width to prevent it from getting too wide */
+            height: 50%;
+        }
+        
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="aboutus-section">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h1>About us</h1>
+                    <p>Get to know the amazing team at Phenoix who are committed to making your online shopping experience exceptional. From our talented developers and creative designers to our detail-oriented product specialists and customer support heroes, each team member brings their expertise and passion to the table. Together, we're driven by a shared dedication to innovation and ensuring your satisfaction.<br>
+                    Our developers are constantly crafting intuitive features, while our designers infuse creativity into every design. Continuously improving our platform, we strive to provide you with the best experience possible, whether it's by expanding our product range, boosting site performance, or delivering outstanding support. Join us as we transform the world of online shopping, one click at a time!</p>
+                </div>
+            </div>
+
+            <!-- First row with two columns -->
+            <div class="row">
+                <div class="column">
+                    <div class="aboutus-card">
+                        <div class="image-section">
+                            <!-- Card 1 image -->
+                            <img src="images/Aayush poudel.jpg" alt="Aayush poudel" height="100%" width="100%">
+                        </div>
+                        <div class="content">
+                            <h3>Aayush poudel</h3>
+                            <h4>Web Developer</h4>
+                            <div class="social-links">
+                                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                            <button class="openModalBtn1">View More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="aboutus-card">
+                        <div class="image-section">
+                            <!-- Card 2 image -->
+                            <img src="images/samy budhathoki.jpg" alt="samy budhathoki" height="100%" width="100%">
+                        </div>
+                        <div class="content">
+                            <h3>samy budhathoki</h3>
+                            <h4>Backend developer</h4>
+                            <div class="social-links">
+                                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="Linkedin"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <button class="openModalBtn2">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second row with two columns -->
+            <div class="row">
+                <div class="column">
+                    <div class="aboutus-card">
+                        <div class="image-section">
+                            <!-- Card 3 image -->
+                            <img src="images/raman nath.jpg" alt="Raman nath" height="100%" width="100%">
+                        </div>
+                        <div class="content">
+                            <h3>Raman nath</h3>
+                            <h4>Frontend developer</h4>
+                            <div class="social-links">
+                                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="Linkedin"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <button class="openModalBtn3">View More</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="column">
+                    <div class="aboutus-card">
+                        <div class="image-section">
+                            <!-- Card 4 image -->
+                            <img src="images/Tika.jpg" alt="Tika" height="100%" width="100%">
+                        </div>
+                        <div class="content">
+                            <h3>Tika Thamsuhang</h3>
+                            <h4>Data analysis</h4>
+                            <div class="social-links">
+                                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="Linkedin"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <button class="openModalBtn4">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal 1 -->
+   <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Aayush poudel</h2>
+        <p>Web Developer</p>
+        <!-- Add more content here for Aayush poudel -->
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>samy budhathoki</h2>
+        <p>Backend developer</p>
+        <!-- Add more content here for samy budhathoki -->
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Raman nath</h2>
+        <p>Frontend developer</p>
+        <!-- Add more content here for Raman nath -->
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tika Thamsuhang</h2>
+        <p>Data analysis</p>
+        <!-- Add more content here for Tika Thamsuhang -->
+        <p>Tika is a good boy</p>
+    </div>
+</div>
+
+   
+<script>
+    var modalBtns1 = document.querySelectorAll('.openModalBtn1');
+    var modalBtns2 = document.querySelectorAll('.openModalBtn2');
+    var modalBtns3 = document.querySelectorAll('.openModalBtn3');
+    var modalBtns4 = document.querySelectorAll('.openModalBtn4');
+
+    var modal1 = document.getElementById('modal1');
+    var modal2 = document.getElementById('modal2');
+    var modal3 = document.getElementById('modal3');
+    var modal4 = document.getElementById('modal4');
+
+    var close1 = modal1.querySelector('.close');
+    var close2 = modal2.querySelector('.close');
+    var close3 = modal3.querySelector('.close');
+    var close4 = modal4.querySelector('.close');
+
+    modalBtns1.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal1.style.display = 'block';
+        });
+    });
+
+    modalBtns2.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal2.style.display = 'block';
+        });
+    });
+
+    modalBtns3.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal3.style.display = 'block';
+        });
+    });
+
+    modalBtns4.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal4.style.display = 'block';
+        });
+    });
+
+    close1.addEventListener('click', function() {
+        modal1.style.display = 'none';
+    });
+
+    close2.addEventListener('click', function() {
+        modal2.style.display = 'none';
+    });
+
+    close3.addEventListener('click', function() {
+        modal3.style.display = 'none';
+    });
+
+    close4.addEventListener('click', function() {
+        modal4.style.display = 'none';
+    });
+
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = 'none';
+        }
+        if (event.target == modal2) {
+            modal2.style.display = 'none';
+        }
+        if (event.target == modal3) {
+            modal3.style.display = 'none';
+        }
+        if (event.target == modal4) {
+            modal4.style.display = 'none';
+        }
+    };
+</script>
+</body>
+</html>
